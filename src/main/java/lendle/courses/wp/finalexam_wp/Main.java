@@ -6,6 +6,7 @@
 package lendle.courses.wp.finalexam_wp;
 
 import javax.swing.DefaultListModel;
+import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
@@ -106,7 +107,8 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel model = (DefaultListModel) this.jList1.getModel();
         if (model.contains(title)) {
             //Q1: 開啟 message dialog （10%）
-            
+            JOptionPane.showMessageDialog(this, title);
+            JOptionPane.showMessageDialog(this, "不可重複", "title",JOptionPane.ERROR_MESSAGE);
             ////////////////////
             return;
         }
@@ -114,6 +116,9 @@ public class Main extends javax.swing.JFrame {
         model.addElement(title);
         //Q2: 建立 TaskFrame（等同於 JInternalFrame）
         //加到 jDesktopPane1 (20%)
+        TaskFrame taskFrame= new TaskFrame();
+        jDesktopPane1.get;
+       
         
         ///////////////////////////////////////
     }//GEN-LAST:event_buttonNewActionPerformed
@@ -133,6 +138,7 @@ public class Main extends javax.swing.JFrame {
             //Q3: 建立 TaskFrame（等同於 JInternalFrame）
             //設定 noteTitle, noteContent
             //加到 jDesktopPane1 (20%)
+            TaskFrame taskFrame = new TaskFrame();
             
             //////////////////////////////////////////
         }
